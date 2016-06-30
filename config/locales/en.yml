@@ -2,6 +2,9 @@ en:
   spree:
     account_no: Account No
     add_details: Add details
+    acount_name: Account Name
+    iban: IBAN
+    swift_code: Swift Code
     additional_details: Additional Details
     back_to_banks_list: Back to Banks list
     banks: Banks
