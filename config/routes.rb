@@ -5,6 +5,12 @@ Spree::Core::Engine.routes.draw do
       put :toggle_activation, on: :member
     end
   end
+  namespace :api do
+  	namespace :v1 do
+  		resources :banks
+  	end
+  end
+
   resources :payments, only: :update
   get '/content/bank_transfer', to: 'content#bank_transfer', as: :bank_transfer_instructions
 end
