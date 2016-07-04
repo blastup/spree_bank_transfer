@@ -3,7 +3,7 @@ module Spree
   	module V1
 	    class BanksController < Spree::Api::BaseController
 	    	def index
-	    		@banks = Spree::Bank.all
+	    		@banks = Spree::Bank.where(active: 1)
 	    		respond_with(@banks)
 	    	end
 	    end
