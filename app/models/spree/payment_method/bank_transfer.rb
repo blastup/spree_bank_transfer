@@ -23,6 +23,10 @@ module Spree
       simulated_successful_billing_response
     end
 
+    def cancel(*args)
+      simulated_successful_billing_response
+    end
+
     def source_required?
       false
     end
