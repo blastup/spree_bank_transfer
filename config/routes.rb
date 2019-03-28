@@ -1,14 +1,15 @@
-Spree::Core::Engine.routes.draw do
+Spree::Core::Engine.add_routes do
   # Add your extension routes here
+
   namespace :admin do
     resources :banks, except: [:show, :destroy] do
       put :toggle_activation, on: :member
     end
   end
   namespace :api do
-  	namespace :v1 do
-  		resources :banks
-  	end
+    namespace :v1 do
+      resources :banks
+    end
   end
 
   resources :payments, only: :update

@@ -1,4 +1,4 @@
-class AddBankPaymentMethods < ActiveRecord::Migration
+class AddBankPaymentMethods < ActiveRecord::Migration[5.2]
   def change
     unless table_exists?(:spree_bank_payment_methods)
       create_table :spree_bank_payment_methods do |t|
